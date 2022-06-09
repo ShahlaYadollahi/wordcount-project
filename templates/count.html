@@ -1,0 +1,12 @@
+<h1>Your text has {{count}} words</h1>
+<a href="{% url 'home' %}">New Text</a>
+<h1>This is your text</h1>
+{{usertext}}
+
+<h1>The most repeated word is {{most_reppitted}} with {{repetition_no}} times of repeatition</h1>
+<body>Here is each word and its numbers of repeatition:</body>
+<br />
+{% for word, no in sorted_word_counts %}
+{{ word }}: {{ no }}
+<br />
+{% endfor %}
